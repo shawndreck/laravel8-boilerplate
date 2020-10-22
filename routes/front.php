@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Front\LessonSearchController;
-use App\Http\Controllers\Front\LessonController;
 use App\Http\Controllers\Front\InquiryController;
 
 Route::view('/', 'front.home.show');
@@ -29,21 +27,4 @@ Route::name('front.')->group(function () {
     Route::post('inquiry', [InquiryController::class, 'store'])->name('inquiry.store');
     Route::get('inquiry', [InquiryController::class, 'show'])->name('inquiry.show');
 
-
-    /*
-    |-------
-    | Lesson
-    |-------
-    */
-    Route::get('search', LessonSearchController::class)->name('search-lessons.index');
-    Route::get('lesson/{lesson:slug}', LessonController::class)->name('lesson.show');
-
-
-    /*
-    |-------------------
-    | Lesson reservation
-    |-------------------
-    */
-    Route::post('lesson-reservation/{lesson:slug}', [LessonReservationController::class, 'store'])->name('lesson-reservation.store');
-    Route::get('lesson-reservation/{lesson:slug}', [LessonReservationController::class, 'show'])->name('lesson-reservation.store');
 });

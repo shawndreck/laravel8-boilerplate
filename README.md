@@ -1,3 +1,9 @@
-# IINE LEMONADE
+# Boiler Plate for laravel 8
 
-An MBA classes for kids and teens
+Set up done
+
+- Docker-Compose
+- Laravel 8
+- front and admin routes
+- app layout for front
+- Basic routes for static pages defined
