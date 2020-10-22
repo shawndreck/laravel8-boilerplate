@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Front\LessonSearchController;
+use App\Http\Controllers\Front\LessonController;
+use App\Http\Controllers\Front\InquiryController;
 
 Route::view('/', 'front.home.show');
 
@@ -32,7 +35,7 @@ Route::name('front.')->group(function () {
     | Lesson
     |-------
     */
-    Route::get('search', SearchLessonController::class)->name('search-lessons.index');
+    Route::get('search', LessonSearchController::class)->name('search-lessons.index');
     Route::get('lesson/{lesson:slug}', LessonController::class)->name('lesson.show');
 
 

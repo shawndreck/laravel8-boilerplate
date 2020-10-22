@@ -59,6 +59,7 @@ class AllRouteTest extends TestCase
                     $this->assertEquals(200, $response->getStatusCode(), $route->uri() . " failed to load");
                 }
             } catch (\Exception $e) {
+                dump($e->getMessage());
                 dd($route->action);
             }
         }
