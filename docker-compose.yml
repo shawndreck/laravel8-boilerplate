@@ -24,7 +24,7 @@ services:
       - db
     restart: always
     ports:
-      - "8000:80"
+      - "80:80"
       - "5000:80"
     volumes:
       - ./:/var/www
